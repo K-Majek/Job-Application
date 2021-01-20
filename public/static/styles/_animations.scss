@@ -1,0 +1,23 @@
+@keyframes navanimate1 {
+    50%{
+        transform: unset;
+    }
+    100%{
+        margin: 0;
+        transform: translate(0, 7px) rotateZ(-45deg);
+    }
+}
+@keyframes navanimate2 {
+    100%{
+        transform: translate(100px, 0);
+    }
+}
+@keyframes navanimate3 {
+    50%{
+        transform: unset;
+    }
+    100%{
+        margin: 0;
+        transform: translate(0, -7px) rotateZ(45deg);
+    }
+}
