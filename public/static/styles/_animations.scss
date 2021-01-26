@@ -5,6 +5,7 @@
     100%{
         margin: 0;
         transform: translate(0, 7px) rotateZ(-45deg);
+        background: rgb(183, 1, 255);
     }
 }
 @keyframes navanimate2 {
@@ -19,5 +20,12 @@
     100%{
         margin: 0;
         transform: translate(0, -7px) rotateZ(45deg);
+        background: rgb(0, 0, 255);
+    }
+}
+
+@keyframes show {
+    100%{
+        opacity: 1;
     }
 }

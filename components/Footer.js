@@ -5,9 +5,10 @@ class Footer extends Component {
     render() {
         return (
             <footer>
-                <div className="footer-rodo"></div>
-                <div className="footer-contact"></div>
-                <div className="footer-links"></div>
+                <div className="footer-rodo">This is the footer</div>
+                <div className="footer-contact">Dear god...</div>
+                <div className="footer-links">There's more</div>
+                No...
             </footer>
         );
     }

@@ -18,6 +18,23 @@
     box-sizing: border-box;
     max-width: 100%;
 }
+header, section{
+    padding: 0 20%;
+    text-align: center;
+    color: rgb(189, 189, 189);
+    @media screen and (max-width: 768px) {
+        padding: 0 10%;
+    }   
+}
+.section-s{
+    min-height: 10vh;
+}
+.section-m{
+    min-height: calc(100vh - 80px);
+}
+.section-l{
+    min-height: 100vh;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -37,3 +54,40 @@ html, body {
 @import "_navbar.scss";
 /*ANIMATIONS*/
 @import "_animations.scss";
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1,p{
+        opacity: 0;
+        animation: show 0.5s forwards;
+    }
+}
+
+.section-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p,h2,h3,h4{
+        opacity: 0;
+        transform: translateX(-25%);
+        transition-property: opacity, transform;
+        transition-duration: 0.5s;
+        &.show {
+            opacity: 1!important;
+            transform: translateX(0)!important;
+        }
+    }
+    &:last-of-type{
+        p,h2,h3,h4{
+            opacity: 0;
+            transform: translateX(25%);
+            transition-property: opacity, transform;
+            transition-duration: 0.5s;
+        }
+    }
+}
+

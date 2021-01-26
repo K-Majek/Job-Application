@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import Router from 'next/router';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function MyApp({Component, pageProps}){
     return(
@@ -14,6 +15,7 @@ export default function MyApp({Component, pageProps}){
             </Head>
             <Navbar/>
             <Component {...pageProps} />
+            <Footer />
         </div>
     )
   }
