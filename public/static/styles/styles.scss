@@ -16,11 +16,12 @@
 }
 *{
     box-sizing: border-box;
-    max-width: 100%;
 }
 header, section{
+    width: 100%;
     padding: 0 20%;
     text-align: center;
+    overflow: hidden;
     color: rgb(189, 189, 189);
     @media screen and (max-width: 768px) {
         padding: 0 10%;
@@ -34,6 +35,9 @@ header, section{
 }
 .section-l{
     min-height: 100vh;
+}
+.is-bold{
+    font-weight: bold;
 }
 html, body {
     margin: 0;
@@ -52,6 +56,7 @@ html, body {
 }
 
 @import "_navbar.scss";
+@import "_footer.scss";
 /*ANIMATIONS*/
 @import "_animations.scss";
 
@@ -75,6 +80,7 @@ html, body {
         opacity: 0;
         transform: translateX(-25%);
         transition-property: opacity, transform;
+        will-change: transform;
         transition-duration: 0.5s;
         &.show {
             opacity: 1!important;
@@ -86,8 +92,72 @@ html, body {
             opacity: 0;
             transform: translateX(25%);
             transition-property: opacity, transform;
+            will-change: transform;
             transition-duration: 0.5s;
         }
     }
 }
 
+.career{
+    h1{
+        margin-bottom: 50px;
+    }
+    h1, .career-wrapper{
+        width: 100%;
+    }
+    .career-wrapper{
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-start;
+        justify-content: center;
+        margin-bottom: 30px;
+        h2{
+            width: 100%;
+            text-align: left;
+        }
+        ul{
+            width: 100%;
+            padding: 0;
+        }
+        li{
+            padding: 0;
+            list-style: none;
+            text-align: left;
+        }
+    }
+    &:last-of-type{
+        margin-bottom: 50px;
+    }
+}
+
+.contact{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    h1,h2,p{
+        width: 100%;
+    }
+    &-links{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(189, 189, 189);
+        transition-property: color, filter;
+        transition-duration: 0.5s;
+        margin-bottom: 15px;
+        will-change: filter;
+        &:visited{
+            text-decoration: none;
+            color: rgb(189, 189, 189);
+        }
+        &:hover{
+            color: rgb(255, 255, 255);
+            filter: drop-shadow(0 0 5px rgb(0, 242, 255));
+        }
+
+    }
+}

@@ -2,10 +2,9 @@ nav{
     width: 100%;
     height: 80px;
     background: linear-gradient(360deg, rgb(1, 0, 21), rgb(48, 0, 94));
-    position: sticky;
-    top: 0;
     display: flex;
     align-items: center;
+    z-index: 2;
 }
 .navbar{
     &-left{
@@ -36,7 +35,7 @@ nav{
     }
     &-link{
         opacity: 0;
-        transition-property: color;
+        transition-property: color font-size;
         transition-duration: 0.5s;
         position: relative;
         color: rgb(177, 177, 177);
@@ -47,17 +46,20 @@ nav{
         }
         &:hover{
             color: rgb(255, 255, 255);
+            @media only screen and (min-width: 769px){
+                font-size: 1.2rem;
+            }
         }
         &.smallres{
             opacity: 0;
             pointer-events: none;
-            transition-property: color, opacity;
+            transition-property: color, opacity, font-size;
             transition-duration: 0.5s;
         }
         &.highres{
             opacity: 1;
             pointer-events: all;
-            transition-property: color, opacity;
+            transition-property: color, opacity, font-size;
             transition-duration: 0.5s;
         }
         &.toggled{
