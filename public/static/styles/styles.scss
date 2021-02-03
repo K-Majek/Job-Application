@@ -65,10 +65,6 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    h1,p{
-        opacity: 0;
-        animation: show 0.5s forwards;
-    }
 }
 
 .section-about{
@@ -129,7 +125,10 @@ html, body {
         margin-bottom: 50px;
     }
 }
-
+.fade-in{
+    opacity: 0;
+    animation: show 0.5s forwards;
+}
 .contact{
     display: flex;
     flex-flow: row wrap;
@@ -137,27 +136,58 @@ html, body {
     align-content: center;
     h1,h2,p{
         width: 100%;
+        a{
+            text-decoration: none;
+            color: rgb(189, 189, 189);
+            transition-property: color, filter;
+            transition-duration: 0.5s;
+            margin-bottom: 15px;
+            will-change: filter, color;
+            &:visited{
+                text-decoration: none;
+                color: rgb(189, 189, 189);
+            }
+            &:hover{
+                color: rgb(255, 255, 255);
+                filter: drop-shadow(0 0 5px rgb(0, 242, 255));
+            }
+    
+        }
     }
     &-links{
         width: 100%;
         display: flex;
         flex-direction: column;
+        min-height: 100px;
     }
-    a{
+    
+}
+.neon-anchor{
+    text-decoration: none;
+    color: rgb(189, 189, 189);
+    transition-property: color, filter;
+    transition-duration: 0.5s;
+    margin-bottom: 15px;
+    will-change: filter, color;
+    &:visited{
         text-decoration: none;
         color: rgb(189, 189, 189);
-        transition-property: color, filter;
-        transition-duration: 0.5s;
-        margin-bottom: 15px;
+    }
+    &:hover{
+        color: rgb(255, 255, 255);
+        filter: drop-shadow(0 0 5px rgb(0, 242, 255));
+    }
+}
+.docs {
+    &-image{
+        min-height: 200px;
+        min-width: 150px;
+        height: 15vw;
+        width: 10vw;
+        transition: 0.5s filter;
         will-change: filter;
-        &:visited{
-            text-decoration: none;
-            color: rgb(189, 189, 189);
-        }
         &:hover{
-            color: rgb(255, 255, 255);
-            filter: drop-shadow(0 0 5px rgb(0, 242, 255));
+            filter: brightness(200%);
         }
-
     }
 }

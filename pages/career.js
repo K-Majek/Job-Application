@@ -6,7 +6,7 @@ class career extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="fade-in">
                 <section className="section-m career">
                     <h1>My career:</h1>
                     <div className="career-wrapper">
@@ -46,7 +46,7 @@ class career extends Component {
                     <div className="career-wrapper">
                         <h2>Code mentoring</h2>
                         <ul>
-                            <li>Helping fellow programmers out with materials, advices and explanations. More of the time it's a voluntary service than a paid job.</li>
+                            <li>Helping fellow programmers out with materials, advices and explanations. Most of the time it's more of a voluntary service than a paid job.</li>
                         </ul>
                     </div>
                 </section>

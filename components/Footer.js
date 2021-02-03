@@ -6,7 +6,7 @@ class Footer extends Component {
         return (
             <footer className="footer">
                 <div className="footer-contact">
-                    <a href="mailto:kamil.majek95@gmail.com">kamil.majek95@gmail.com</a>
+                    <a className="neon-anchor" href="mailto:kamil.majek95@gmail.com">kamil.majek95@gmail.com</a>
                 </div>
                 <div className="footer-links">
                     <Link href="/">

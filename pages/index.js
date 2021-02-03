@@ -24,7 +24,7 @@ class index extends Component {
 
     render() {
         return (
-            <div >
+            <div className="fade-in">
                 <header className="section-m header">
                     <div>
                         <h1>Hello, I'm Kamil Majek, a one, simple guy aspiring to be a fullstack developer.</h1>
